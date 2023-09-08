@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHSS CPY</title>
     <style>
-        /* Your existing CSS styles */
-
-        /* New styles for the menu and theme buttons */
         #menu-button {
             position: absolute;
-            top: 43px; /* Adjusted top position */
-            right: 5px; /* Adjusted right position */
+            top: 43px;
+            right: 5px;
             background-color: #c8102e;
             color: #fff;
             padding: 10px 20px;
@@ -22,9 +19,9 @@
         #menu-container {
             display: none;
             position: absolute;
-            top: 50px; /* Adjusted top position */
-            right: 10px; /* Adjusted right position */
-            background-color: #fff;
+            top: 79px;
+            right: 5px;
+            background-color: #c8102e;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -40,18 +37,16 @@
             margin-bottom: 10px;
         }
 
-        /* Reset some default styles */
         body, h1, h2, h3, p, ul, li {
             margin: 0;
             padding: 0;
         }
 
-        /* Global styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2; /* Light gray background */
+            background-color: #f2f2f2;
             background-image: url('jj.jpg');
-            background-size: cover; /* Cover the entire screen */
+            background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #333;
@@ -60,7 +55,7 @@
         }
 
         header {
-            background-color: #c8102e; /* Dark red background */
+            background-color: #c8102e;
             color: #fff;
             padding: 10px 0;
         }
@@ -82,23 +77,23 @@
         }
 
         .hero {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             padding: 100px 0;
         }
 
         .hero h1 {
             font-size: 36px;
-            color: #fff; /* White heading color for contrast */
+            color: #fff;
         }
 
         .hero p {
             font-size: 18px;
-            color: #ccc; /* Light gray text color */
+            color: #ccc;
         }
 
         .btn {
-            background-color: #c8102e; /* Dark red button */
+            background-color: #c8102e;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -109,7 +104,7 @@
         }
 
         .news {
-            background-color: #fff; /* White background */
+            background-color: #fff;
             padding: 20px;
             margin: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -118,7 +113,7 @@
         .news h2 {
             font-size: 24px;
             margin-bottom: 20px;
-            color: #333; /* Dark text color */
+            color: #333;
         }
 
         .news article {
@@ -133,52 +128,47 @@
         .news h3 {
             font-size: 18px;
             margin-top: 10px;
-            color: #444; /* Slightly darker gray text color */
+            color: #444;
         }
 
         .news p {
             font-size: 16px;
             margin-top: 10px;
-            color: #666; /* Slightly darker gray text color */
+            color: #666;
         }
 
         footer {
-            background-color: #000; /* Black footer */
+            background-color: #000;
             color: #fff;
             text-align: center;
             padding: 10px 0;
-        }
-
-        footer {
             position: absolute;
             bottom: 0;
             width: 100%;
-            text-align: center;
         }
 
         #copyright {
-    text-align: center;
-    background-color: #c8102e;
-    color: #fff;
-    padding: 10px;
-    font-size: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+            text-align: center;
+            background-color: #c8102e;
+            color: #fff;
+            padding: 10px;
+            font-size: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#" id="home-link">Home</a></li>
                 <li><a href="school.html">Courses</a></li>
                 <li><a href="https://www.google.com/maps/place/V8M6%2B79V+GHSS+CHERPULASSERY,+ghss,+Cherpulassery/@10.883241,76.3109255,15z/data=!4m6!3m5!1s0x3ba7cde36dee16c1:0xaa51cc780483632b!8m2!3d10.883241!4d76.3109255!16s%2Fg%2F11bytnd306">Location</a></li>
             </ul>
         </nav>
-        <!-- Button to toggle the menu -->
         <button id="menu-button">Menu</button>
     </header>
 
@@ -190,11 +180,12 @@
         </div>
     </section>
 
-    <!-- Container for the menu -->
     <div id="menu-container">
         <ul id="vertical-menu">
-            <li>Contact : test@gmail.com</li>
-            <li>Phone no : 9090909090</li>
+            <ul id="vertical-menu">
+                <li style="color: #ffffff;">Contact : test@gmail.com</li>
+                <li style="color: #ffffff;">Phone no : 9090909090</li>
+            </ul>
         </ul>
     </div>
 
@@ -202,15 +193,23 @@
         <p id="copyright">&copy; 2023 GHSS CPY & MND</p>
     </footer>
 
-    <!-- JavaScript code for menu button -->
     <script>
-        const menuButton = document.getElementById("menu-button");
-        const menuContainer = document.getElementById("menu-container");
+       const menuButton = document.getElementById("menu-button");
+       const menuContainer = document.getElementById("menu-container");
 
-        // Toggle the menu visibility
-        menuButton.addEventListener("click", () => {
-            menuContainer.style.display = (menuContainer.style.display === "block") ? "none" : "block";
-        });
+       menuButton.addEventListener("click", () => {
+           if (menuContainer.style.display === "block") {
+               menuContainer.style.display = "none";
+           } else {
+               menuContainer.style.display = "block";
+           }
+       });
+
+       const homeLink = document.getElementById("home-link");
+
+       homeLink.addEventListener("click", () => {
+           location.reload();
+       });
     </script>
 </body>
 </html>
