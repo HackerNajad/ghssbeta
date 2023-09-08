@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHSS CPY</title>
     <style>
+        /* Your existing CSS styles */
+
+        /* New styles for the menu and theme buttons */
+        #menu-button {
+            position: absolute;
+            top: 43px; /* Adjusted top position */
+            right: 5px; /* Adjusted right position */
+            background-color: #c8102e;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #menu-container {
+            display: none;
+            position: absolute;
+            top: 50px; /* Adjusted top position */
+            right: 10px; /* Adjusted right position */
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        #vertical-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        #vertical-menu li {
+            margin-bottom: 10px;
+        }
+
         /* Reset some default styles */
         body, h1, h2, h3, p, ul, li {
             margin: 0;
@@ -131,10 +166,12 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="school.html">Courses</a></li>                
-                <li><a href= "https://www.google.com/maps/place/V8M6%2B79V+GHSS+CHERPULASSERY,+ghss,+Cherpulassery/@10.883241,76.3109255,15z/data=!4m6!3m5!1s0x3ba7cde36dee16c1:0xaa51cc780483632b!8m2!3d10.883241!4d76.3109255!16s%2Fg%2F11bytnd306">Location</a></li>
+                <li><a href="school.html">Courses</a></li>
+                <li><a href="https://www.google.com/maps/place/V8M6%2B79V+GHSS+CHERPULASSERY,+ghss,+Cherpulassery/@10.883241,76.3109255,15z/data=!4m6!3m5!1s0x3ba7cde36dee16c1:0xaa51cc780483632b!8m2!3d10.883241!4d76.3109255!16s%2Fg%2F11bytnd306">Location</a></li>
             </ul>
         </nav>
+        <!-- Button to toggle the menu -->
+        <button id="menu-button">Menu</button>
     </header>
 
     <section class="hero">
@@ -145,8 +182,27 @@
         </div>
     </section>
 
+    <!-- Container for the menu -->
+    <div id="menu-container">
+        <ul id="vertical-menu">
+            <li>Contact : test@gmail.com</li>
+            <li>Phone no : 9090909090</li>
+        </ul>
+    </div>
+
     <footer>
         <p id="copyright">&copy; 2023 GHSS CPY & MND</p>
     </footer>
+
+    <!-- JavaScript code for menu button -->
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const menuContainer = document.getElementById("menu-container");
+
+        // Toggle the menu visibility
+        menuButton.addEventListener("click", () => {
+            menuContainer.style.display = (menuContainer.style.display === "block") ? "none" : "block";
+        });
+    </script>
 </body>
 </html>
