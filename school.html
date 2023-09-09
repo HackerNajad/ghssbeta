@@ -17,14 +17,19 @@
         }
         section {
             padding: 20px;
+            text-align: center;
         }
         h2 {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
             font-size: 40px;
-            color: #333;
         }
         p {
             font-size: 25px;
             color: #666;
+            margin-bottom: 20px;
         }
         .copyright {
             text-align: center;
@@ -32,6 +37,33 @@
             color: #fff;
             padding: 10px 0;
             font-size: 20px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        .back-button {
+            background-color: #000000;
+        color: #ffffff;
+        border: none;
+        padding: 20px 20px;
+        cursor: pointer;
+        position: absolute; 
+        top: 20px; 
+        left: 10px; 
+       font-size: 20px;
+        }
+        .back-button span {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .back-button {
+            display: flex;
+            align-items: center;
+            justify-content: centers
+            
         }
     </style>
 </head>
@@ -54,8 +86,22 @@
         <img src="comm.png" alt="Commerce Image">
         <p>Commerce is essential in today's business world. Our courses include Commerce Statistics and Commerce Compulsory Application.</p>
     </section>
+
+    <section>
+        <button id="backButton" class="back-button">
+            <span>&#8592;</span> Go to Home
+        </button>
+    </section>
+
     <div class="copyright">
         &copy; 2023 GHSS CPY & MND
     </div>
+
+    <script>
+    document.getElementById('backButton').addEventListener('click', function() {
+        window.close(); // Close the current page
+        window.location.href = 'index.html'; // Redirect to the index page
+    });
+</script>
 </body>
 </html>
